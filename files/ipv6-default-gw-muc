@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ "${IFACE}" == "eth0" ]; then
+	ip -6 route add 2a01:138:a015:babe::1/128 dev ${IFACE}
+	ip -6 route add default via 2a01:138:a015:babe::1
+fi
